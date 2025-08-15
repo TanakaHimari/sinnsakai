@@ -1,0 +1,28 @@
+[Libraries]/
+Temp/
+Obj/
+Build/
+Builds/
+Library/
+Logs/
+UserSettings/
+MemoryCaptures/
+
+# Visual Studio
+.vs/
+*.csproj
+*.sln
+*.user
+*.unityproj
+*.pidb
+*.suo
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.VC.opendb
+
+# OS
+.DS_Store
+Thumbs.db
