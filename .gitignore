@@ -11,7 +11,8 @@ MemoryCaptures/
 Assets/Asset.meta
 Assets/Asset/*.ttf
 Assets/Asset/*.meta
-
+Assets/Asset/*.rej
+Assets/Asset/*.asset
 
 
 
