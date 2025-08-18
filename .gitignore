@@ -9,6 +9,9 @@ Logs/
 UserSettings/
 MemoryCaptures/
 Assets/Asset.meta
+Assets/Asset/*.ttf
+Assets/Asset/*.meta
+
 
 
 
