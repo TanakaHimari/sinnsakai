@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private Rigidbody rb;
+    private Rigidbody2D rb;
     private Transform tr;
-    
+    [SerializeField] private Coin coin;
+
+
     //èüéËÇ…ëñÇÈ
     [SerializeField]
     [Range(1f, 2f)] private float autoSpeed = 2f;
@@ -18,7 +20,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
         tr = GetComponent<Transform>();
     }
 
@@ -57,4 +59,7 @@ public class Player : MonoBehaviour
         Vector2 newPosition = new Vector2(lanePositions[currentLane], tr.position.y);
         tr.position = newPosition;   
     }
+ 
 }
+
+
