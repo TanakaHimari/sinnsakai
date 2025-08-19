@@ -3,28 +3,51 @@ using TMPro;
 
 public class Coin : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI moneyText; // UI表示用
-    private int money = 0;
+    [SerializeField] private TextMeshProUGUI moneyText;
+    [SerializeField] private TextMeshProUGUI itemText;
+
+    public  int money = 0;
+    public int itemCount = 0;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        //コインに触れたら所持金を増やす
         if (other.CompareTag("Coin"))
         {
             money += 500;
             UpdateUI();
-            Destroy(other.gameObject); // コインを消す
+            //触れたコインは消える
+            Destroy(other.gameObject); 
         }
     }
 
-    private void UpdateUI()
+    public void UpdateUI()
     {
         if (moneyText != null)
         {
-            moneyText.text = $"所持金：{money} 円";
+            moneyText.text = $"所持金：\n{money} 円";
         }
         else
         {
             Debug.LogWarning("moneyText が設定されていません！");
         }
+
+        if (itemText != null)
+        {
+            itemText.text = $"お土産:\n{itemCount}個";
+        }
+        else
+        {
+            Debug.LogWarning("ItemText が設定されていません！");
+        }
+
+    }
+   /// <summary>
+   /// アイテム数更新
+   /// </summary>
+    public void AddItem()
+    {
+        itemCount++;
+        UpdateUI();
     }
 }
