@@ -7,7 +7,7 @@ public class ShopItem : MonoBehaviour
 {
     //商品の値段
     [SerializeField] 
-    [Range(1,5)]private int rawPrice = 1;
+    [Range(1,5)]private int rawPrice = 2;
 
     /// <summary>
     /// 商品の価格を500円単位で設定

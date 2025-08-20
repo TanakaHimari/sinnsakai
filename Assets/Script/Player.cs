@@ -9,9 +9,13 @@ public class Player : MonoBehaviour
     [SerializeField] private Coin coin;
 
 
-    //勝手に走る
+    [Header("前進する速度")]
+    [Tooltip("プレイヤーはこの速度で自動で走る")]
     [SerializeField]
     [Range(1f, 2f)] private float autoSpeed = 2f;
+
+    [Header("レーン数")]
+    [Tooltip("プレイヤーはこの位置にしか移動しない")]
     //3レーン制のランゲームにする
     [SerializeField] private float[] lanePositions = { -2f, 0f,2f };
     //初期位置は中央

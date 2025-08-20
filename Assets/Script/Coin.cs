@@ -3,7 +3,10 @@ using TMPro;
 
 public class Coin : MonoBehaviour
 {
+    [Tooltip("所持金を表示するテキスト")]
     [SerializeField] private TextMeshProUGUI moneyText;
+
+    [Tooltip("お土産数を表示するテキスト")]
     [SerializeField] private TextMeshProUGUI itemText;
 
     public  int money = 0;
