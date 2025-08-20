@@ -9,10 +9,17 @@ public class Player : MonoBehaviour
     [SerializeField] private Coin coin;
 
 
-    [Header("前進する速度")]
+    [Header("通常の前進速度")]
     [Tooltip("プレイヤーはこの速度で自動で走る")]
     [SerializeField]
-    [Range(1f, 2f)] private float autoSpeed = 2f;
+    [Range(1f, 2f)] private float baseSpeed = 2f;
+
+    //実際に使われる移動速度
+    private float currentSpeed;
+
+    //速度低下中かどうかのフラグ
+    private bool isSlowed = false;
+
 
     [Header("レーン数")]
     [Tooltip("プレイヤーはこの位置にしか移動しない")]
@@ -26,12 +33,15 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         tr = GetComponent<Transform>();
+
+        //初期速度を設定
+        currentSpeed = baseSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(0f, autoSpeed);
+        rb.velocity = new Vector2(0f, baseSpeed);
 
 
         //Sキーで真ん中へ
@@ -63,7 +73,35 @@ public class Player : MonoBehaviour
         Vector2 newPosition = new Vector2(lanePositions[currentLane], tr.position.y);
         tr.position = newPosition;   
     }
- 
+
+    /// <summary>
+    /// 一時的に速度を変更する関数
+    /// </summary>
+    /// <param name="factor">速度の倍率</param>
+    /// <param name="duration">持続時間</param>
+    public void ApplySpeedModifier(float factor,float duration)
+    {
+        //すでに低下中なら重複しない
+        if (!isSlowed)
+        {
+            StartCoroutine(SlowDownTemporarily(factor,duration));
+        }
+    }
+
+    private IEnumerator SlowDownTemporarily(float factor, float duration)
+    {
+        isSlowed = true;
+        //移動速度を低下
+        currentSpeed = baseSpeed * factor;
+        //指定時間待つ
+        yield return new WaitForSeconds(duration);
+
+        //元の速度に戻す
+        currentSpeed = baseSpeed;
+        isSlowed = false;
+    }
+
+
 }
 
 

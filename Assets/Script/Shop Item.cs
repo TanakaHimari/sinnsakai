@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ShopItem : MonoBehaviour
 {
-    //商品の値段
+   
     [SerializeField] 
     [Range(1,5)]private int rawPrice = 2;
 
@@ -22,8 +22,10 @@ public class ShopItem : MonoBehaviour
         //プレイヤーに接触しなかったらこの処理はしない
         if (!other.CompareTag("Player")) return;
 
+        //Coin.csを探してcoinSystemに格納している
         Coin coinSystem = other.GetComponent<Coin>();
 
+        //所持金が足りればお土産が買える
         if (coinSystem != null && coinSystem.money >= Price)
         {
             //商品代分所持金を減らす
