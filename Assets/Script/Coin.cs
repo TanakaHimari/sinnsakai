@@ -28,7 +28,7 @@ public class Coin : MonoBehaviour
     {
         if (moneyText != null)
         {
-            moneyText.text = $"Š‹àF\n{money} ‰~";
+            moneyText.text = $"Š‹à:\n{money} ‰~";
         }
         else
         {
