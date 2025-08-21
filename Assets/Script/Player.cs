@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     [Header("通常の前進速度")]
     [Tooltip("プレイヤーはこの速度で自動で走る")]
     [SerializeField]
-    [Range(1f, 2f)] private float baseSpeed = 2f;
+    [Range(1f, 100f)] private float baseSpeed = 2f;
 
     //実際に使われる移動速度
     private float currentSpeed;
