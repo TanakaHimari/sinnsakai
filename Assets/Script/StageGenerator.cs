@@ -65,7 +65,7 @@ public class StageGenerator : MonoBehaviour
 
             List<int> sOptions = new List<int>(shopxOptions);
             //重複防止
-            sOptions.Remove(hcX);
+           
 
             //二回おきに配置
             if (i % 2 == 0) 
@@ -74,13 +74,14 @@ public class StageGenerator : MonoBehaviour
                 if (sOptions.Count > 0)
                 {
                     int sX = shopxOptions[Random.Range(0, shopxOptions.Count)];
-                    //重複防止
+                  
 
                     float sY = i * spacing + GetYOffsetByLane(sX);
 
                     //ショップアイテムを配置
                     Vector3 sPos = new Vector3(sX, sY, 0);
                     Instantiate(shopItemPrefab, sPos, Quaternion.identity);
+                    sOptions.Remove(hcX);
                 }
 
             }
