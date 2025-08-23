@@ -17,10 +17,10 @@ public class Title : MonoBehaviour
     public void ChangeScene(string targetScene)
 
     {
-        SceneManager.LoadScene(targetScene);
+        SceneManager.LoadScene(sceneName);
     }
 
-    private void Update()
+  /*  private void Update()
     {
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -34,5 +34,5 @@ public class Title : MonoBehaviour
         }
 
     }
-
+  */
 }
