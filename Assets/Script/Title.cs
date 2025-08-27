@@ -9,9 +9,10 @@ public class Title : MonoBehaviour
 
     private void Start()
     {
-        //前回のスコアが残らないようにする
+      /*  //前回のスコアが残らないようにする
         PlayerPrefs.DeleteKey("Money");
         PlayerPrefs.DeleteKey("ItemCount");
+      */
 
     }
     public void ChangeScene(string targetScene)
