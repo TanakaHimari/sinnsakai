@@ -290,12 +290,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2049645955}
-  - {fileID: 1230316941}
   m_Father: {fileID: 716902388}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1, y: -109}
+  m_AnchoredPosition: {x: 1, y: -167}
   m_SizeDelta: {x: -510, y: -244}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &136141242
@@ -681,11 +680,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293500417}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.6, y: 0.5, z: 1}
+  m_LocalScale: {x: 1.5999999, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1230316941}
   m_Father: {fileID: 716902388}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1002,8 +1002,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1753511027}
-  - {fileID: 136141241}
   - {fileID: 293500418}
+  - {fileID: 136141241}
   - {fileID: 1095674566}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1318,14 +1318,14 @@ RectTransform:
   m_GameObject: {fileID: 1230316940}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.16393442, y: 0.424, z: 1}
+  m_LocalScale: {x: 0.62500006, y: 1.06, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 136141241}
+  m_Father: {fileID: 293500418}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -30.491798, y: 70.4}
+  m_AnchoredPosition: {x: 25.624985, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1230316942
@@ -1584,6 +1584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameInputField: {fileID: 616930025}
+  storyManager: {fileID: 1393788034}
   UItoHide:
   - {fileID: 1095674565}
   - {fileID: 616930023}
@@ -1621,6 +1622,7 @@ MonoBehaviour:
   dialogueText: {fileID: 0}
   storyDatas:
   - {fileID: 11400000, guid: 749aafc5d840d874882cfeac2f771462, type: 2}
+  - {fileID: 11400000, guid: a57cdee4e6257784888e0124d353a5c1, type: 2}
   background: {fileID: 1753511028}
   storyText: {fileID: 2049645956}
   characterName: {fileID: 1230316942}
