@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Collections.Generic;
+
 using UnityEngine.Rendering;
-using static UnityEditor.Progress;
+//using static UnityEditor.Progress;
 
 
 public class StageGenerator : MonoBehaviour
