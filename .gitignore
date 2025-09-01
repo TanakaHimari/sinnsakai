@@ -13,6 +13,11 @@ Assets/Asset/*.ttf
 Assets/Asset/*.meta
 Assets/Asset/*.rej
 Assets/Asset/*.asset
+Build/
+*.exe
+*.apk
+*.zip
+
 
 
 
