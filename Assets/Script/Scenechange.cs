@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Title : MonoBehaviour
+public class Sscenechange: MonoBehaviour
 {
     [SerializeField] private string sceneName = "InGame";
 
