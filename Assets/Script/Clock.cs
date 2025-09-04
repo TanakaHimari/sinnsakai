@@ -16,7 +16,7 @@ public class Clock : MonoBehaviour
 
     private float startTime;
 
-    private void OnValidate()
+    private void Start()
     {
         startTime = hour * 3600f + minute * 60f + second;
     }
